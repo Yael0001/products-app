@@ -1,0 +1,39 @@
+<div class="table-wrapper">
+    <table class="products-table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Rating</th>
+                <th>Stock</th>
+                <th>Brand</th>
+                <th>Category</th>
+                <th>Thumbnail</th>
+                <th>Gallery</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+                <tr class="product-row" data-product-id="{{ product.id }}">
+                    <td>{{ product.title }}</td>
+                    <td>{{ product.description }}</td>
+                    <td>${{ product.price }}</td>
+                    <td>{{ product.rating }}</td>
+                    <td>{{ product.stock }}</td>
+                    <td>{{ product.brand or "N/A" }}</td>
+                    <td>{{ product.category }}</td>
+                    <td>
+                        <img src="{{ product.thumbnail }}" alt="{{ product.title }} thumbnail" class="thumbnail-image">
+                    </td>
+                    <td>
+                        <button type="button" class="gallery-button" 
+                            data-images='{{ product.images | tojson }}'>
+                            Gallery
+                        </button>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

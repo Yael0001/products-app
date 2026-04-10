@@ -1,0 +1,9 @@
+<form method="GET" action="{{ url_for('main.products') }}" class="search-form">
+    <input 
+        type="text" 
+        name="q" 
+        placeholder="Search products..." 
+        value="{{ query }}" 
+    class="search-input">
+    <button type="submit" class="search-button">Search</button>
+</form>

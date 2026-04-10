@@ -1,0 +1,161 @@
+:root {
+    --background-color: #f5f5f5;
+    --background-color-secondary: #fff;
+    --background-color-table: #f0f0f0;
+
+    --text-color: #222;
+    
+    --message-error-color: #d9534f;
+    --border-color: #ddd;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.products-section h1 {
+    margin-bottom: 20px;
+}
+
+.search-form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    flex: 1;
+    max-width: 320px;
+    padding: 10px 12px;
+    font-size: 14px;
+}
+
+.search-button {
+    padding: 10px 16px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.message {
+    padding: 12px;
+    margin-bottom: 16px;
+    background-color: var(--background-color-secondary);
+    border: 1px solid var(--border-color);
+}
+
+.message-error {
+    border-color: var(--message-error-color);
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    background-color: var(--background-color-secondary);
+    border: 1px solid var(--border-color);
+}
+
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.products-table th,
+.products-table td {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    vertical-align: top;
+}
+
+.products-table th {
+    background-color: var(--background-color-table);
+}
+
+.thumbnail-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    
+}
+
+.gallery-button {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.pagination-link {
+    text-decoration: none;
+}
+
+.pagination-status {
+    font-weight: 600;
+}
+
+.gallery-row td {
+    background-color: var(--background-color-secondary);
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 12px;
+}
+
+.gallery-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+}
+
+@media (max-width: 900px) {
+    .page-container {
+        padding: 12px;
+    }
+
+    .products-table th,
+    .products-table td {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .thumbnail-image {
+        width: 45px;
+        height: 45px;
+    }
+
+    .gallery-button {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+
+    .gallery-image {
+        width: 90px;
+        height: 90px;
+    }
+
+    .gallery-container {
+        flex-wrap: wrap;
+    }
+}
